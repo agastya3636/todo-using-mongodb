@@ -1,5 +1,3 @@
-Here’s a README file for your "todo-using-mongodb" project:
-
 ---
 
 # Todo App using MongoDB
