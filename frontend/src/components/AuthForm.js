@@ -23,16 +23,18 @@ const AuthForm = () => {
         }
       });
 
-      console.log(response);
+      // console.log(response);
 
       if (response.status === 200) {
         console.log(isLogin ? 'Login successful!' : 'Registration successful!');
         localStorage.setItem('token', response.data.token); 
         navigate('/tasks'); 
       } else {
+        alert(response.data)
         console.log('An unexpected error occurred.');
       }
     } catch (error) {
+      alert(error.response.data.message)
       console.error('Error:', error);
     }
   };
